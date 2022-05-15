@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head> 
+        <meta charset="utf-8">
+	<title></title>
+</head>
+<style>
+	ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+  margin-top:25px; /*делаем отступ сверху*/
+  background:#30A8E6; /*добавляем фон всему меню*/
+  height: 50px; /*задаем высоту*/
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#30A8E6; /*добавляем фон к пункту меню*/
+  color:#fff; /*меняем цвет ссылок*/
+  padding:0px 15px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:50px; /*ровняем меню по вертикали*/
+  display: block; 
+  border-right: 1px solid #fff; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+
+}
+a:hover {
+  background:#00008b;/*добавляем эффект при наведении*/
+}
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  position:relative; /*задаем позицию для позиционирования*/
+}
+     
+    /*Стили для скрытого выпадающего меню*/
+    .ul_2 {
+        position:absolute;
+        top:25px;
+        display:none;   
+    }
+   
+    /*Делаем скрытую часть видимой*/
+    li:hover > .ul_2 {
+        display:block; 
+        width:250px;  /*Задаем ширину выпадающего меню*/      
+    }
+   .li_2 {
+        float:none; /*Убираем горизонтальное позиционирование*/
+    }
+ 
+    .s_1 {
+    	margin: 0;
+        padding: 2px;
+    	background: #fff;
+    	width: 100%;
+    	height: 800px;
+    }
+        .s_2 {
+        margin: 0;
+        padding: 2px;
+    	background: grey;
+    	width: 100%;
+    	height: 800px;
+    }
+    
+</style>
+<body>
+<ul>
+    <li><a href="#2">Главная</a></li>
+    <li><a href="#">Услуги</a>
+        <ul class="ul_2">
+            <li class="li_2"><a href="#">Услуга 1</a></li>
+            <li class="li_2"><a href="#">_______</a></li>
+            <li class="li_2"><a href="#">Услуга 3</a></li>
+        </ul>
+    </li>  
+    <li><a href="#3">Цены</a></li>
+    <li><a href="#4">Контакты</a></li>
+</ul>
+
+<main>
+	<section class="s_1" id="2">
+	</section>
+	<section class="s_2" id="3">
+	</section>
+</main>
+
+</body>
+</html>
